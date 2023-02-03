@@ -1,0 +1,42 @@
+                               Assignment- oops fundamentals
+
+Q.1- How to create an Object in java?
+Ans- We can use the "new" operator to create an object.
+Using the new keyword is the most popular way to create an object or instance of the class. When we create an instance of the class by using the new keyword, it allocates memory (heap) for the newly created object and also returns the reference of that object to that memory. The new keyword is also used to create an array. The syntax for creating an object is:
+ClassName object = new ClassName();  
+
+Q.2- What is the use of a new keyword in java?
+Ans- The new keyword in Java instantiates a class by allocating desired memory for an associated new object. It then returns a reference to that memory. Many times, the new keyword in Java is also used to create the array object. The new keyword is followed by a call to a constructor, which instantiates the new object.
+
+Q.3- What are the different types of variables in java?
+Ans- A variable is the name of a reserved area allocated in memory.
+There are three types of variables in Java:
+
+  a.local variable
+  b.instance variable
+  c.static variable
+
+a.local variable: variable declared inside the body of the method is called local variable. You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
+
+b.instance variable:A variable declared inside the class but outside the body of the method, is called an instance variable.
+
+c.static variable:A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
+
+Q.4- What is the difference between Instance variable and Local variable ?
+Ans- Instance Variable: These variables are declared within a class but outside a method, constructor, or block and always get a default value.
+These variables are usually created when we create an object and are destroyed when the object is destroyed.
+Each and every object will have its own copy of instance variables.
+
+Local Variable: These variables are declared within a method but do not get any default value.
+They are usually created when we enter a method or constructor and are destroyed after exiting the block or when the call returns from the method.
+Its scope is generally limited to a method and its scope starts from the line they are declared. Their scope usually remains there until the closing curly brace of the method comes.The initialization of the local variable is mandatory.
+
+Q.5- In which area memory is allocated for instance  variable and local variable?
+Ans- Variables which are declared within a Method are referred as a Local variable.These variable are allocated memory in the stack.
+Variables which are declared within the class are referred to as Instance variables.They are allocated memory only when an object is created.The memory will be allocated in the Heap.Deallocation of memory cannot be predicted as it is deallocated by Garbage Collector.
+
+Q.6- What is method overloading?
+Ans- If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+If we have to perform only one operation, having same name of the methods increases the readability of the program.
+Suppose you have to perform addition of the given numbers but there can be any number of arguments, if you write the method such as a(int,int) for two parameters, and b(int,int,int) for three parameters then it may be difficult for you as well as other programmers to understand the behavior of the method because its name differs.
+

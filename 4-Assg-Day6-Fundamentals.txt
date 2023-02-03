@@ -1,0 +1,59 @@
+                     Assignment Fundamentals of Java
+
+Q.1- What is Programming language?
+Ans- A programming language is a computer language that is used by programmers (developers) to communicate with computers. It is a set of instructions written in any specific language ( C, C++, Java, Python) to perform a specific task.A programming language is mainly used to develop desktop applications, websites, and mobile applications.
+
+Q.2- Why do we need a programming language?
+Ans- The major need for the programming language is to communicate with the computers and also the programming languages are used to develop an application for performing a specific task, automating things, etc.
+Programming languages is a way for us to describe to a computer what it should do, in a way that both the computer and we can understand.
+
+Q.3- What are the features of Java?
+Ans- a.Simple- It is simple to understand.
+
+     b.Object-Oriented-The features of object-oriented programming are supported by Java. Its object model is 
+straightforward and flexible.
+
+     c.Portable-We have the idea of portability in Java. Java allows the same software to run on various 
+platforms.
+
+     d.Platform independent- Because Java and C++ are platform independent, application programs created in 
+one Operating system can run on any other Operating system. C and C++, however, are platform 
+dependent languages, making it impossible for application programs created in one Operating system to 
+run in any other Operating system.
+
+     e.Secured- Java offers a variety of defences against malware and viruses. It guarantees that neither damage 
+nor security will be compromised.
+
+     f.Robust-  It assists us in identifying potential errors as soon as feasible during program development.
+
+Q.4- What is an Object?
+Ans- An object is an entity with state and behaviour, such as a chair, bike, marker, pen, table, or car. It could be 
+intellectual or physical (tangible and intangible). The banking system is an illustration of an intangible entity.
+An object has three characteristics:
+
+a. State: represents an object's data (value).
+
+b. Behavior: represents how an object behaves (or how it functions), such as when you deposit or withdraw 
+money.
+
+c. Identity: Usually, a distinct ID is used to implement an object's identification. The external user cannot see 
+the value of the ID. However, the JVM uses it internally to uniquely identify each object.
+
+Q.5- What is a class?
+Ans- A class is a collection of items with similar characteristics. It serves  as a model or blueprint from which things can be made. It makes sense as a whole. It cannot be bodily.
+
+Q.6- Explain about the main() method in Java?
+Ans- The Java main method is usually the first method you learn about when you start programming in Java because its the entry point for executing a Java program. The main method can contain code to execute or call other methods, and it can be placed in any class that's part of a program.The main () is the starting point for JVM to start execution of a Java program.
+The main() is the starting point for JVM to start execution of a Java program. Without the main() method, JVM will not execute the program. The syntax of the main() method is:
+
+  public static void main(String [] args)
+
+public: It is an access specifier. We should use a public keyword before the main() method so that JVM can identify the execution point of the program. If we use private, protected, and default before the main() method, it will not be visible to JVM.
+
+static: You can make a method static by using the keyword static. We should call the main() method without creating an object. Static methods are the method which invokes without creating the objects, so we do not need any object to call the main() method.
+
+void: In Java, every method has the return type. Void keyword acknowledges the compiler that main() method does not return any value.
+
+main(): It is a default signature which is predefined in the JVM. It is called by JVM to execute a program line by line and end the execution after completion of this method. We can also overload the main() method.
+
+String args[]: The main() method also accepts some data from the user. It accepts a group of strings, which is called a string array. It is used to hold the command line arguments in the form of string values.

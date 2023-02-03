@@ -1,0 +1,117 @@
+         Assignment - Operators and Loops
+
+Q.1- What are the Conditional Operators in Java?
+Ans- In Java, conditional operators check the condition and decides the desired result on the basis of both conditions.
+There are three types of the conditional operator in Java:
+Conditional AND
+Conditional OR
+Ternary Operator
+
+Conditional AND:
+The operator is applied between two Boolean expressions. It is denoted by the two AND operators (&&). It returns true if and only if both expressions are true, else returns false.
+
+Conditional OR:
+The operator is applied between two Boolean expressions. It is denoted by the two OR operator (||). It returns true if any of the expression is true, else returns false.
+
+Ternary Operator:
+The meaning of ternary is composed of three parts. The ternary operator (? :) consists of three operands. It is used to evaluate Boolean expressions. The operator decides which value will be assigned to the variable. It is the only conditional operator that accepts three operands. It can be used instead of the if-else statement. It makes the code much more easy, readable, and shorter.
+variable = (condition) ? expression1 : expression2  
+
+Q.2- What are the types of operators based on the number of operands?
+Ans- There are two types of mathematical operators: unary and binary. Unary operators perform an action with a single operand. Binary operators perform actions with two operands.
+
+Q.3- What is the use of Switch casw in Java programming?
+Ans- The switch statement is a multi-way branch statement. In simple words, the Java switch statement executes one statement from multiple conditions. It is like an if-else-if ladder statement. It provides an easy way to dispatch execution to different parts of code based on the value of the expression. Basically, the expression can be a byte, short, char, and int primitive data types.
+
+// switch statement 
+switch(expression)
+{
+   
+   case value1 : Statements
+      break; 
+   case value2 : Statements
+      break; 
+   default :  Statements
+}
+
+Q.4- What are the priority levels of arithmetic operation in Java?
+Ans- In Java, the precedence of * is higher than that of - . Hence, the multiplication is performed before subtraction.
+When there is more than one arithmetic operator in an expression; multiplication, division, and modulo are calculated first, followed by subtraction and addition.
+Parentheses, Exponents, Multiplication/Division ,Addition/Subtraction.
+
+Q.5- What are the conditional Statements and use of conditional statements in Java?
+Ans- A conditional statement tells a program to execute an action depending on whether a condition is true or false.
+java has the following conditional statements: 
+1. if statement
+2. nested if statement
+3. if-else statement
+4. if-else-if statement
+5. Switch Case Statement
+The conditional statements are used to tackle the decision-making scenarios, if statement tests a condition and executes the code only if the condition is true,
+
+Q.6- What is the syntax of if else statement?
+Ans-Use if to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false. Use else if to specify a new condition to test, if the first condition is false.
+syntax:
+if(condition){  
+//code if condition is true  
+}else{  
+//code if condition is false  
+}  
+ 
+Q.7- What are the 3 types of iterative statements in java?
+Ans- Java programming language provides following types of loop to handle looping requirements. Repeats a statement or group of statements until a given condition is true.
+Iteration Statements
+a. while' loop.
+b. do while' loop.
+c. for' loop.
+
+for loop : for loop provides a concise way of writing the loop structure. Unlike a while loop, a for statement consumes the initialization, condition and increment/decrement in one line thereby providing a shorter, easy to debug structure of looping. 
+syntax-
+for(initialization; condition; increment/decrement){    
+//statement or code to be executed    
+}
+
+while loop :A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement. 
+syntax-
+while (boolean condition)
+{
+   loop statements...
+}
+
+do-while loop:do while loop is similar to while loop with only difference that it checks for condition after executing the statements, and therefore is an example of Exit Control Loop. 
+syntax-
+do
+{
+    statements..
+}
+while (condition);   
+
+Q.8- Write the difference between for loop and do-while loop?
+Ans- while loop:
+a.While the loop is an entry control loop because firstly, the condition is checked, then the loop's body is executed.
+b.Syntax of while loop:
+while (condition)
+{
+Block of statements;
+}
+
+do-while loop:
+a.The do-while loop is an exit control loop because in this, first of all, the body of the loop is executed then the condition is checked true or false.
+b.Syntax of do-while loop:
+do
+{
+statements;
+}
+while (condition);
+
+Q.9- Write a program to print numbers from 1 to 10.
+Ans- 
+
+public class Test{
+    public static void main(String [] args){
+        System.out.println("numbers from 1 to 10");
+        for(int i=1;i<=10;i++){
+            System.out.println(i);
+        }
+    }
+}

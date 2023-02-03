@@ -1,0 +1,38 @@
+           Assignment git and github part-2
+
+Q.1- How to check if git is available on your system?
+Ans- Using 'git --version' command ,To see if Git is installed on your system, open your terminal and type git --version . If your terminal returns a Git version as an output that confirms you have Git installed on your system.
+
+Q.2- How to initialize a new Git repository?
+Ans- a.Create a new repository on GitHub.com
+     b.Open Terminal, 
+     c.Change the current working directory to your local project,
+     d.Use the init command to initialize the local directory as a Git repository,
+     e.Add the files in your new local repository,
+     f.Commit the files that you've staged in your local repository.
+
+Q.3- How to tell git about your name and email?
+Ans- a.To know the git Username, we use this command-> git config --global user.name "<your_username>"
+     ,b.To know the git Email, we use this command -> git config --global user.email "<your_email>"
+
+Q.4- How to add a file to the staging area?
+Ans- Add files to the staging area by using the "git add" command and passing necessary options. Commit files to the local repository using the "git commit -m <message>" command.
+
+Q.5- How to remove a file from the staging area?
+Ans- To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The git rm command does that, and also removes the file from your working directory so you don't see it as an untracked file the next time around.
+
+Q.6- How to make a commit?
+Ans- To add a Git commit message to your commit, you will use the git commit command followed by the -m flag and then your message in quotes. Adding a Git commit message should look something like this: git commit -m “Add an anchor for the trial end sectionnn.”
+
+Q.7- How to send your changes to a remote repository?
+Ans-To push the commit from the local repo to your remote repositories, run git push -u remote-name branch-name where remote-name is the nickname the local repo uses for the remote repositories and branch-name is the name of the branch to push to the repository. You only have to use the -u option the first time you push.
+
+Q.8- What is the difference between clone and pull?
+Ans-   git clone-	
+     a. Used to set up a local repository.	
+     b. Make a copy of your remote repository and save it to your local machine.	
+     c. Used once in a project.
+       git pull-	
+     a. Used to sync remote and local repositories.
+     b. Fetch and merge the latest changes from a remote repository to your local repository.
+     c. Used several times in a project.
