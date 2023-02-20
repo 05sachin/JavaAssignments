@@ -1,0 +1,49 @@
+                           Assignment-Constructor
+
+Q.1- What is a Constructor?
+Ans- In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling constructor, memory for the object is allocated in the memory.
+It is a special type of method which is used to initialize the object.
+It calls a default constructor if there is no constructor available in the class. In such case, Java compiler provides a default constructor by default.
+
+Q.2- What is Constructor Chaining?
+Ans- In constructor chain, a constructor is called from another constructor in the same class this process is known as constructor chaining. It occurs through inheritance. When we create an instance of a derived class, all the constructors of the inherited class (base class) are first invoked, after that the constructor of the calling class (derived class) is invoked.
+We can achieve constructor chaining in two ways:
+a. Within the same class: If the constructors belong to the same class, we use this,
+b. From the base class: If the constructor belongs to different classes (parent and child classes), we use the super keyword to call the constructor from the base class.
+
+Q.3- Can we call a subclass constructor from a superclass costructor?
+Ans- No, we cannot call subclass constructor from superclass constructor.but A subclass can call a constructor defined by its superclass
+
+Q.4- What happens if you keep a return type for a constructor?
+Ans-The constructor cannot have a return type. It should create and return new object. Hence it would give compilation error.
+
+Q.5- What is No-arg constructor?
+Ans- A constructor that has no parameter is known as the No-argument or Zero argument constructor. If we don’t define a constructor in a class, then the compiler creates a constructor(with no arguments) for the class. And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor. 
+
+Q.6- How is a No-argument constructor different from the default constructor?
+Ans- Every default constructor is a 0 argument constructor but every 0 argument constructor is not a default constructor.
+A constructor that has no parameter is known as the No-argument or Zero argument constructor. If we don’t define a constructor in a class, then the compiler creates a constructor(with no arguments) for the class.
+A constructor that has no parameters is known as default the constructor. A default constructor is invisible. And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor.
+
+Q.7- When do we need Constructor Overloading?
+Ans- As construction overloading enables the creation of the object of a specific class in several ways, it is most commonly used in Java programs based on the requirement of the programmer. With the use of constructor overloading, objects can be initialized with different data types.
+
+Q.8- What is Deafult constructor Explain with an Example
+Ans- A constructor without any arguments or with the default value for every argument is said to be the Default constructor. A default constructor in Java is created automatically by the Java compiler when the programmer doesn't create any constructor in the entire program. It is created to assign the default values to the instance variables of the class when an object is created.
+ex- 
+class Student{  
+int id;  
+String name;  
+ 
+void display(){System.out.println(id+" "+name);}  
+  
+public static void main(String args[]){  
+ 
+Student s1=new Student();  
+Student s2=new Student();  
+ 
+s1.display();  
+s2.display();  
+}  
+}  
+In the above class,you are not creating any constructor so compiler provides you a default constructor. Here 0 and null values are provided by default constructor.

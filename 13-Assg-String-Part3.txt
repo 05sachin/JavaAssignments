@@ -1,0 +1,310 @@
+                   Assignment-StringJava-Part3
+
+Q.1- WAP to remove Duplicates from a String .(TAe any string example with duplicates characters)
+Ans- 
+// WAP to remove Duplicates from a String .(TAe any string example with duplicates characters)
+public class P1RemoveDuplicates{
+    public static void main(String[] args) {
+        String s="Hello Sachin Gangwar";
+        int n=s.length();
+        
+        String ans="";
+        for(int i=0;i<n;i++){
+            char ch=s.charAt(i);
+            if(ans.indexOf(ch)<0){
+                ans=ans+ch;
+            }
+        }
+        System.out.println("Before removal: "+s);
+        System.out.println("After removal: "+ans);
+    }
+}
+output:
+Before removal: Hello Sachin Gangwar
+After removal: Helo SachinGgwr
+
+Q.2- WAP to print Duplicates Characters from string 
+Ans- 
+// WAP to print Duplicates Characters from string
+public class P2PrintDuplicates {
+    public static void main(String[] args) {
+        String s="beautiful beach beach";
+        char a[]=s.toCharArray();
+        int n=s.length();
+
+        String ans="";
+
+        for(int i=0;i<n;i++){
+            char ch=a[i];
+            for(int j=i+1;j<n;j++){
+                if(a[j]==ch && ans.indexOf(ch)<0){
+                    ans=ans+ch;
+                    System.out.print(ch+" ");
+                    break;
+                }
+            }
+        }        
+    }
+}
+output:
+b e a u   c h
+
+Q.3- WAP to check if"2552" is palindrome or not.
+Ans- 
+// WAP to check if"2552" is palindrome or not.
+public class P3Palindrome {
+    public static void main(String[] args) {
+        String str="2552";
+
+        String rstr=""; 
+        //reverse string 
+        for(int i=str.length()-1;i>=0;i--){
+            rstr=rstr+str.charAt(i);
+        }
+
+        if(str.equals(rstr)){
+            System.out.println("Given string is a palindrome.");
+        }else{
+            System.out.println("Given string is not a palindrome.");
+        }
+    }
+}
+output:
+Given string is a palindrome.
+
+Q.4- WAP to count the number of consonants ,vowels,special characters in a string.
+Ans-
+// WAP to count the number of consonants ,vowels,special characters in a string.
+public class P3CountConsonantsVowelsSpecialCharacters {
+    public static void main(String[] args) {
+        String str="Hello,Sachin Gangwar 123";
+        int consonants=0 ,vowels=0 ,SpecialCharacters=0 ,digits=0;
+
+        for(int i=0;i<str.length();i++){
+            
+            char ch=str.charAt(i);
+            if(ch>='a'&&ch<='z' || ch>='A'&&ch<='Z'){
+
+                if(ch=='a' || ch=='A' || ch=='e' || ch=='E' || ch=='i' || ch=='I' || ch=='o' || ch=='O' || ch=='u' || ch=='U'){
+                    vowels++;
+                }else{
+                    consonants++;
+                }
+            }else if(ch>='0'&&ch<='9'){
+                digits++;
+            }else{
+                SpecialCharacters++;
+            }
+        }
+
+        System.out.println("Count of consonatns: "+consonants);
+        System.out.println("Count of vowels: "+vowels);
+        System.out.println("Count of digits: "+digits);
+        System.out.println("Count of SpecialCharacters: "+SpecialCharacters);
+        
+    }
+}
+output:
+Count of consonatns: 12
+Count of vowels: 6
+Count of digits: 3
+Count of SpecialCharacters: 3
+
+Q.5- WAP to implement anagram checking least inbuilt methods being used.
+Ans-
+import java.util.Arrays;
+
+// WAP to implement anagram checking least inbuilt methods being used.
+public class P4AnagramChecking {
+    static String removeSpace(String str) {
+        String ans = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                continue;
+            }
+            ans = ans + str.charAt(i);
+        }
+        return ans;
+    }
+
+    static String lowerCase(String str) {
+        String ans = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch >= 'A' && ch <= 'Z') {
+                char ch1 = (char)(ch-'A'+'a');
+                ans = ans + ch1;
+            } else {
+                ans = ans + ch;
+            }
+        }
+        return ans;
+    }
+    static boolean isEquals(char a1[],char a2[]){
+        for(int i=0;i<a2.length;i++){
+            if(a1[i]!=a2[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String str1 = "Mother In Law";
+        String str2 = "Hitler Woman";
+
+        str1 = removeSpace(str1);
+        str2 = removeSpace(str2);
+        
+        
+        if (str1.length() != str2.length()) {
+            System.out.println("Given Strings are not anagram of each other.");
+        } else {
+     
+            str1 = lowerCase(str1);
+            str2 = lowerCase(str2);
+            
+
+            char a1[] = new char[str1.length()];
+            char a2[] = new char[str2.length()];
+            for (int i = 0; i < str1.length(); i++) {
+                a1[i] = str1.charAt(i);
+                a2[i] = str2.charAt(i);
+            }
+
+            Arrays.sort(a1);
+            Arrays.sort(a2);
+
+            if (isEquals(a1, a2)) {
+                
+                System.out.println("Given Strings are anagram of each other.");
+            } else {
+                System.out.println("Given Strings are not anagram of each other.");
+            }
+        }
+    }
+}
+output:
+Given Strings are anagram of each other.
+
+Q.6- WAP to implement pangram checking with least inbuilt methods being used.
+Ans-
+// WAP to implement pangram checking with least inbuilt methods being used.
+public class P5PangramChecking {
+    static String removeSpace(String str) {
+        String ans = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                continue;
+            }
+            ans = ans + str.charAt(i);
+        }
+        return ans;
+    }
+
+    static String lowerCase(String str) {
+        String ans = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch >= 'A' && ch <= 'Z') {
+                char ch1 = (char) (ch - 'A' + 'a');
+                ans = ans + ch1;
+            } else {
+                ans = ans + ch;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        String str = "THE QUICK BROWN Fox Jumps Over Lazy Dog";
+        str = removeSpace(str);
+        if (str.length() < 26) {
+            System.out.println("Given String is not a pangram.");
+        } else {
+            str = lowerCase(str);
+
+            char a[] = new char[str.length()];
+
+            for (int i = 0; i < str.length(); i++) {
+                a[i] = str.charAt(i);
+            }
+
+            int check[] = new int[26];
+
+            for (int i = 0; i < a.length; i++) {
+                check[a[i] - 97]++; //a 97
+            }
+
+            for (int i = 0; i < 26; i++) {
+                if (check[i] == 0) {
+                    System.out.println("Given string is not a pangram.");
+                    break;
+                }
+            }
+
+            System.out.println("Given string is a pangram.");
+        }
+
+    }
+}
+output:
+Given string is a pangram.
+
+Q.7- WAP to find if string contains all unique characters.
+Ans-
+import java.util.Arrays;
+
+// WAP to find if string contains all unique characters.
+public class P6AllUniqueCharacters {
+    public static void main(String[] args) {
+        String str="abcdefgh";
+
+        char a[]=str.toCharArray();
+        Arrays.sort(a);
+        boolean temp=false;
+        for(int i=1;i<a.length;i++){
+            if(a[i-1]==a[i]){
+                temp=true;
+                System.out.println("String has duplicate characters.");
+                break;
+            }
+        }
+        
+        if(!temp){
+            System.out.println("String has all unique characters.");
+        }
+    }
+}
+output:
+String has all unique characters.
+
+Q.8- WAP to find the maximum occurring characters in a string.
+Ans-  
+// WAP to find the maximum occurring characters in a string.
+public class P7MaximumOccuringCharacter {
+    public static void main(String[] args) {
+        String str="sachingangwar";
+        
+        int freq[]=new int[256];
+        
+        for(int i=0;i<str.length();i++){
+            freq[str.charAt(i)]++;
+        }
+
+        int mcount=-1;
+        char result =' ';
+
+        for(int i=0;i<str.length();i++){
+            if(freq[str.charAt(i)] > mcount){
+                mcount=freq[str.charAt(i)];
+                result =str.charAt(i);
+            }
+        }
+
+        System.out.println(result);
+
+    }
+}
+output:
+a

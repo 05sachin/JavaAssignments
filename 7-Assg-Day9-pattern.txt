@@ -1,4 +1,6 @@
-      Assignment- Pattern
+                    Assignment- Pattern
+
+   
  Q.1- Write a program to print Alphabets A,B,C,D,E,F,G,H, using pattern programming logic.
 sol- 
 // Write a Program to print Alphabets A,B,C,D,E,F,G,H , using pattern programming logic.

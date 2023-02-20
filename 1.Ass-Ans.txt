@@ -1,0 +1,25 @@
+               Assignment-Computer Basics
+
+Q.1- What is a computer?
+Ans- A computer is a programmable electronic device that accepts raw data as input and processes it with a set of instructions to produce the result as output.
+
+Q.2- What is RAM?
+Ans- RAM, which stands for Random Access Memory, is a hardware device generally located on the motherboard of a computer and acts as an internal memory of the CPU.RAM is a volatile memory, which means it does not store data      or instructions permanently.
+
+Q.3- Where is data stored in a computer?
+Ans- Data (information) is stored in computers as Files.All data stored on storage media, such as hard disk drives,solid state drives, external hard drives, USB sticks, and SD cards, can be converted into a series of bits,   also known as binary digits.
+     
+Q.4- What is that input device used to type text and numbers on a document in the computer system?
+Ans- The keyboard is an input device that allows you to enter letters, numbers and symbols into your computer.
+
+Q.5- What are the output devices?
+Ans- Monitors, Printers, Speakers, Headphones etc.
+
+Q.6- Which is the input device that allows a user to move the cursor or pointer on the screen?
+Ans- The mouse is a input device which is used to move cursor or pointer across the screen.
+
+Q.7- Which language is directly understood by the computer without a translation program?
+Ans- The language that is directly understood by the computer without translation program is Machine language(Assembly language).
+
+Q.8- What are input devices?
+Ans- Keyboard,Mouse,Joystick,Light Pen,Scanner etc.

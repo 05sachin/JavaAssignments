@@ -1,0 +1,78 @@
+            Assignment-Array-Part1
+
+Q.1- What do you mean by an array?
+Ans- Java array is an object which contains elements of a similar data type. Additionally, The elements of an array are stored in a contiguous memory location. It is a data structure where we store similar elements. We can store only a fixed set of elements in a Java array.
+Array in Java is index-based, the first element of the array is stored at the 0th index, 2nd element is stored on 1st index and so on.
+
+Q.2- How to create an Array?
+Ans- There are two ways you can declare and initialize an array in Java. 
+Syntax to Declare an Array in Java:
+dataType[] arr; (or)  
+dataType []arr; (or)  
+dataType arr[]; 
+ 
+Instantiation of an Array in Java:
+arrayRefVar=new datatype[size]; 
+
+Initializing array: You can initialize specific element in the array by specifying its index within square brackets. All array indexes start at zero. 
+a[0]=10;//initialization  
+a[1]=20;  
+a[2]=70;  
+a[3]=40;  
+a[4]=50;  
+
+We can declare, instantiate and initialize the java array together by:
+int a[]={33,3,4,5};//declaration, instantiation and initialization  
+
+Q.3- Can we change the size of an array at run time?
+Ans- No, we cannot change array size in java after defining.
+The only way to change the array size is to create a new array and then populate or copy the values of existing array into new array or we can use ArrayList instead of array.
+
+Q.4- Can you declare an array without assigning the size of an array?
+Ans-Yes, We can also create arrays without specifying any size and by just specifying the elements. This is done as shown below: 
+int myarray[] = {1, 2, 3, 4, 5};
+
+Q.5- What is the default value of Array?
+Ans- If we don’t assign values to array elements and try to access them, the compiler does not produce an error as in the case of simple variables. Instead, it assigns values that aren’t garbage. 
+When an array is created without assigning it any elements, compiler assigns them the default value.Following are the examples:
+Boolean - false
+int - 0
+double - 0.0
+Object - null
+
+Q.6- What is the 1D array with an example?
+Ans- A one-dimensional array in Java is a collection of similar types of elements stored at contiguous memory locations. The data is stored in a continuous manner, which makes operations like search, delete, insert etc., much easier.It is clear from the name that a one-dimensional array in java must deal with only one parameter. Entities of similar types can be stored together using one-dimensional arrays. It can store primitive data types (int, float, char, etc.) or objects.
+ex-
+public class AssignValues {
+
+  public static void main(String args[]) {
+    int number[]; // array declared
+    number = new int[10]; // allocating memory, initialization
+    number[0] = 11;
+    number[1] = 22;
+    number[2] = 33;
+    number[3] = 44;
+    number[4] = 55;
+    number[5] = 66;
+    number[6] = 77;
+    number[7] = 88;
+    number[8] = 99;
+    number[9] = 100;
+  }
+}
+
+Q.7- Write a program on a 2D array?
+Ans-
+class Test{  
+    public static void main(String args[]){  
+
+        int arr[][]={{1,2,3},{2,4,5},{4,4,5}};  
+         //printing 2D array  
+         for(int i=0;i<3;i++){  
+            for(int j=0;j<3;j++){  
+                System.out.print(arr[i][j]+" ");  
+            }  
+            System.out.println();  
+          }  
+    }
+}  

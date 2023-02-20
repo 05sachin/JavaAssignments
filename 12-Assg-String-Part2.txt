@@ -1,0 +1,197 @@
+                                Assignment-StringInJava-Part2
+
+Q.1- Write a simple String program to take input from user.
+sol- 
+import java.util.Scanner;
+
+public class P2TakeInputString {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a String :");
+        String s=sc.nextLine();
+
+        System.out.println(s);
+    }
+}
+output:
+Enter a String :
+Sachin Gangwar
+Sachin Gangwar
+
+Q.2- How do you concatenate two string in java? Give an example?
+Ans-In Java, String concatenation forms a new String that is the combination of multiple strings. There are two ways to concatenate strings in Java:
+
+a. By + (String concatenation) operator: Java String concatenation operator (+) is used to add strings. 
+For Example:
+public class P3StringConcatenation {
+    public static void main(String[] args) {
+        String s1 = "Sachin"+"GAngwar";
+        System.out.println(s1);
+    }
+}
+output:
+SachinGangwar
+
+b. By concat() method: The String concat() method concatenates the specified string to the end of current string. Syntax:
+public String concat(String another) 
+For Example- 
+public class P3StringConcatenation {
+    public static void main(String[] args) {
+        String s1 = "Sachin "+"Gangwar";
+        
+        String s2="Hello,";
+        s2=s2.concat(s1);
+        System.out.println(s2);
+    }
+}
+output:
+Hello,Sachin Gangwar
+
+Q.3- How do you find the length of a string in java Explain with an example?
+Ans- The Java String class length() method finds the length of a string. The length of the Java string is the same as the Unicode code units of the string.
+Signature:
+The signature of the string length() method is given below:
+public int length()  
+Returns:
+Length of characters. In other words, the total number of characters present in the string.
+For Example:
+public class LengthExample{  
+    public static void main(String args[]){  
+        String s1="Sachin";  
+        String s2="Gangwar";  
+        System.out.println("string length is: "+s1.length());//6 is the length of s1 string  
+         System.out.println("string length is: "+s2.length());//7 is the length of s2 string  
+    }
+}  
+output:
+string length is: 6
+string length is: 7
+
+Since the length() method gives the total number of characters present in the string; therefore, one can also check whether the given string is empty or not.
+
+Q.4- How do you compare two strings in java? Give an example 
+Ans- There are three ways to compare String in Java:
+
+a.By Using equals() Method:
+The String class equals() method compares the original content of the string. It compares values of string for equality. String class provides the following two methods:
+
+public boolean equals(Object another) compares this string to the specified object.
+public boolean equalsIgnoreCase(String another) compares this string to another string, ignoring case.
+
+public class P4CompareTwoString {
+    public static void main(String[] args) {
+        String s1 ="sachin";
+        String s2="sachin";
+        String s3=new String("sachin");
+        String s4="gangwar";
+
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.equals(s3));
+        System.out.println(s1.equals(s4));
+    }
+}
+output:
+true
+true
+false
+
+b.By Using == Operator:
+The == operator compares references not values.
+
+public class P4CompareTwoString {
+    public static void main(String[] args) {
+        String s1 ="sachin";
+        String s2="sachin";
+        String s3=new String("sachin");
+        
+        System.out.println(s1==s2);//true (because both refer to same instance)  
+        System.out.println(s1==s3);//false(because s3 refers to instance created in nonpool)  
+    }
+}
+output:
+true
+false
+
+c.By compareTo() Method:
+The String class compareTo() method compares values lexicographically and returns an integer value that describes if first string is less than, equal to or greater than second string.
+
+Suppose s1 and s2 are two String objects. If:
+
+s1 == s2 : The method returns 0.
+s1 > s2 : The method returns a positive value.
+s1 < s2 : The method returns a negative value.
+
+public class P4CompareTwoString {
+    public static void main(String[] args) {
+        String s1 ="sachin";
+        String s2="sachin";
+        String s3=new String("gangwar");
+        
+        System.out.println(s1.compareTo(s2));//0  
+        System.out.println(s1.compareTo(s3));//1(because s1<s3)  
+        System.out.println(s3.compareTo(s1));//-1(because s3 > s1 )  
+    }
+}
+output:
+0
+1
+-1
+
+Q.5- Write a program to find the length of the string "refrigerator"
+Ans-
+public class P5FindLength {
+    public static void main(String[] args) {
+        String s="refrigerator";
+        int length=s.length();
+
+        System.out.println(length);
+    }
+}
+
+ 
+Q.6- Write a program to check if the letter 'e' if present in world 'Umbrella'.
+Ans- 
+public class P6CheckLetter{
+    public static void main(String[] args) {
+        String s="Umbrella";
+
+        int n=s.length();
+        boolean temp=false;
+
+        for(int i=0;i<n;i++){
+            if(s.charAt(i)=='e'){
+                temp=true;
+                break;
+            }
+        }
+        System.out.println(temp);
+    }
+}
+output:
+true
+
+Q.7- Write a program to delete all consonants from the string "hello,have a good day".
+Ans-
+public class P7DeleteAllConsonants {
+    public static void main(String[] args) {
+        String s="hello,have a good day";
+        int n=s.length();
+        StringBuilder str=new StringBuilder();
+
+        for(int i=0;i<n;i++){
+            if(s.charAt(i)>='a'&&s.charAt(i)<='z' || s.charAt(i)>='A'&&s.charAt(i)<='Z'){
+                if(s.charAt(i)=='a'|| s.charAt(i)=='A'||s.charAt(i)=='e'|| s.charAt(i)=='E'|| s.charAt(i)=='i'|| s.charAt(i)=='I'||s.charAt(i)=='o'|| s.charAt(i)=='O'||s.charAt(i)=='U'|| s.charAt(i)=='u'){
+                    str.append(s.charAt(i));
+                }else{
+                    continue;
+                }
+            }else{
+                str.append(s.charAt(i));
+            }
+        }
+        
+        System.out.println(str);
+    }
+}
+output:
+eo,ae a oo a 

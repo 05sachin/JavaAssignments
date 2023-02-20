@@ -1,0 +1,95 @@
+                  Assignment-StringJava-Part4
+
+Q.1- What is Mutable String in Java Explain with an example.
+Ans- Mutable strings are those strings whose content can be changed without creating a new object. StringBuffer and StringBuilder are mutable versions of String in java, whereas the java String class is immutable. Immutable objects are those objects whose contents cannot be modified once created.
+ex-
+public class Mutable{
+    public static void main(String[]Args){
+        StringBuilder sb=new StringBuilder("pw");
+        sb.append("java");
+        System.out.println(sb);
+   }
+}
+output:
+pwjava
+
+Q.2- WAP to reverse a String 
+Input: "PWSKILLS"
+output: "SLLIKSWP"
+Ans- 
+// WAP to reverse a String 
+// Input: "PWSKILLS"
+// output: "SLLIKSWP"
+public class P8ReverseString{
+    public static void main(String[] args) {
+        String str="PWSKILLS";
+        StringBuilder sb=new StringBuilder();
+        
+        for(int i=str.length()-1;i>=0;i--){
+            sb.append(str.charAt(i));
+        }
+
+        System.out.println("Before reversing : "+str);
+        System.out.println("After reversing : "+sb);
+    }
+}
+output:
+Before reversing : PWSKILLS
+After reversing : SLLIKSWP
+
+Q.3- WAP to reverse a sentence while preserving the position
+Input: Think Twice
+output:"kniht eciwt"
+Ans-
+// WAP to reverse a sentence while preserving the position
+// Input: Think Twice
+// output:"kniht eciwt"
+public class P8ReverseWord {
+    public static void main(String[] args) {
+        String str = "Think Twice";
+        str = str.toLowerCase();
+
+        StringBuilder result = new StringBuilder();
+        String arr[] = str.split(" ");
+
+        for (String s : arr) {
+
+            for (int i = s.length() - 1; i >= 0; i--) {
+                result.append(s.charAt(i));
+            }
+            result.append(" ");
+        }
+        System.out.println(result);
+    }
+}
+output:
+kniht eciwt 
+
+Q.4- WAP to sort a String Alphabetically
+Ans- 
+
+// WAP to sort a String Alphabetically
+public class P9SortString {
+    public static void main(String[] args) {
+        String str="sachingangwar";
+        
+        char a[]=str.toCharArray();
+        // Sort String
+        for(int i=1;i<a.length;i++){
+            char min=a[i];
+            int j=i-1;
+            for(  ;j>=0;j--){
+                if(min>=a[j]){
+                    break;
+                }
+                a[j+1]=a[j];
+                
+            }
+            a[j+1]=min;
+        }
+        System.out.print("After Sorting String : ");
+        System.out.println(a);
+    }
+}
+output:
+After Sorting String : aaacgghinnrsw
