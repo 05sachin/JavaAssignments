@@ -1,0 +1,61 @@
+                       Assignment- Map and Generics
+
+Q.1- What is the Map in Java?
+Ans- A map contains values on the basis of key, i.e. key and value pair. Each key and value pair is known as an entry. A Map contains unique keys.
+A Map is useful if you have to search, update or delete elements on the basis of a key.
+
+Q.2- What are the commonly used implementation of Map in Java?
+Ans- The three general-purpose Map implementations are HashMap , TreeMap and LinkedHashMap .
+
+Q.3- What is the difference between HashMap and TreeMap?
+Ans- HashMap:
+
+a. HashMap does not keep track of the order of insertions.
+b. Map, Cloneable, and Serializable interfaces are all ones that are implemented by HashMap.
+c. A Hash Table serves as the foundation for HashMap's underlying data structure.
+d. The Null key can be used once in HashMap, and the Null value can be used any number of times.
+
+TreeMap:
+
+a. TreeMap preserves insertion order.
+b. TreeMap is capable of being Cloned and Serialized, in addition to implementing the NavigableMap interface.
+c. The Red-Black Tree is the foundational data structure that TreeMap is built upon.
+d. TreeMap does not let the use of a null key, but it does permit the use of a null value any number of times.
+
+Q.4- How do you check if a key exists in a Map in Java?
+Ans- a. Using containsKey() method:
+The containsKey() method returns true if this map contains a mapping for the specified key. 
+c. Using Map.keySet() method:
+In Java 8 and above, you can get the stream of the keys in the map using the Map.keySet() method, and check if any elements of the stream match with the specified key. 
+d. Using get() method:
+If your map doesn’t contain any null value.
+
+Q.5- What are Generics in Java?
+Ans- Generics means parameterized types. The idea is to allow type (Integer, String, … etc., and user-defined types) to be a parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes that work with different data types. An entity such as class, interface, or method that operates on a parameterized type is a generic entity.
+
+Q.6- What are the benefits of using Generics in Java?
+Ans- a. Type-safety: We can hold only a single type of objects in generics. It doesn?t allow to store other objects.
+b. Type casting is not required: There is no need to typecast the object.
+c. Compile-Time Checking: It is checked at compile time so problem will not occur at runtime. The good programming strategy says it is far better to handle the problem at compile time than runtime.
+
+Q.7- What is a Generic Class in Java?
+Ans- A class that can refer to any type is known as a generic class. Here, we are using the T type parameter to create the generic class of specific type.
+example 
+
+Creating a generic class:
+class MyGen<T>{  
+   T obj;  
+   void add(T obj){this.obj=obj;}  
+   T get(){return obj;}  
+} 
+ 
+The T type indicates that it can refer to any type (like String, Integer, and Employee). The type you specify for the class will be used to store and retrieve the data.
+
+Q.8- What is a Type Parameter in Java Generics?
+Ans- A type parameter, also known as a type variable, is an identifier that specifies a generic type name. The type parameters can be used to declare the return type and act as placeholders for the types of the arguments passed to the generic method, which are known as actual type arguments.
+
+Q.9- What is a Generics Method in java?
+Ans- Like the generic class, we can create a generic method that can accept any type of arguments. Here, the scope of arguments is limited to the method where it is declared. It allows static as well as non-static methods.
+
+Q.10- What is the difference between ArrayList and ArrayList<T>?
+Ans- The key difference between them is that ArrayList is not using Generics while ArrayList is a generic ArrayList but they look very similar.

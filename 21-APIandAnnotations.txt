@@ -1,0 +1,123 @@
+                          Assignment- API and Annotation
+
+Q.1- Program to display current date and time in Java
+Ans- 
+// Java Program to Display Current Date and Time
+import java.util.*;
+
+public class Demo {
+	public static void main(String args[])
+	{
+		Date current_Date = new Date();
+
+		System.out.println(current_Date);
+		
+	}
+}
+
+Q.2- Write a program to convert a date to a String in the format "MM/dd/yyyy".
+Ans- 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+ 
+public class DateToString {
+    public static void main(String[] args)
+    {
+        
+        Date date = new Date();
+       
+        SimpleDateFormat date_format1 = new SimpleDateFormat("MM/dd/yyyy");
+ 
+        String date_str = date_format1.format(date);
+       
+        System.out.println("MM/dd/yyyy : " + date_str);
+       
+       
+    }
+}
+
+Q.3- What is the difference between collections and streams? Explain with an example.
+Ans- Collection:
+Collection is an in-memory data structure, which holds all the values that the data structure currently has. Every element in the Collection has to be computed before we add it to the Collection. Operations such as searching, sorting, insertion, manipulation, and deletion can be performed on a Collection. It provides many interfaces like (Set, List, Queue, Deque) and Classes like (ArrayList, Vector, LinkedList, PriorityQueue, HashSet).
+ex-
+import java.io.*;
+import java.util.*;
+
+// Main class
+class Demo {
+
+	public static void main(String[] args)
+	{
+		List<String> CompanyList = new ArrayList<>();
+
+		CompanyList.add("Google");
+		CompanyList.add("Apple");
+		CompanyList.add("Microsoft");
+
+		Comparator<String> com
+			= (String o1, String o2) -> o1.compareTo(o2);
+
+		Collections.sort(CompanyList, com);
+
+		for (String name : CompanyList) {
+
+			System.out.println(name);
+		}
+	}
+}
+
+Streams:
+On the other hand, IStream is an API that is introduced in Java 8 which is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result. The Stream API is used to process collections of objects.
+ex-
+
+import java.io.*;
+import java.util.*;
+
+// Main class
+class Demo {
+
+	public static void main(String[] args)
+	{
+		// Creating an empty Arraylist
+		List<String> CompanyList = new ArrayList<>();
+
+		
+		CompanyList.add("Google");
+		CompanyList.add("Apple");
+		CompanyList.add("Microsoft");
+
+		// Sorting the list
+		// using sorted() method and
+		// printing using for-each loop
+		CompanyList.stream().sorted().forEach(
+			System.out::println);
+	}
+}
+
+
+Q.4- What is enums in Java? explain with an example.
+Ans- Java Enums can be thought of as classes which have a fixed set of constants (a variable that does not change). The Java enum constants are static and final implicitly. It is available since JDK 1.5.
+ex:
+class EnumExample{  
+//defining the enum inside the class  
+public enum Season { WINTER, SPRING, SUMMER, FALL }  
+//main method  
+public static void main(String[] args) {  
+//traversing the enum  
+for (Season s : Season.values())  
+System.out.println(s);  
+}}  
+
+Q.5- What are in built annotations in Java ?
+Ans- There are several built-in annotations in Java. Some annotations are applied to Java code and some to other annotations.
+Built-In Java Annotations used in Java code
+@Override
+@SuppressWarnings
+@Deprecated
+Built-In Java Annotations used in other annotations
+@Target
+@Retention
+@Inherited
+@Documented

@@ -1,0 +1,38 @@
+                             Assignment Interface
+
+Q.1- What is an interface in Java?
+Ans-  An interface in Java is a mechanism that is used to achieve complete abstraction. It is basically a kind of class that contains only constants and abstract methods.
+
+Q.2-  Which modifiers are allowed for methods in an Interface?Explain with an example?
+Ans-you can have only public, abstract as modifiers for the methods of an interface.
+ex-
+interface MyInterface{
+   public abstract void display();
+   public abstract void setName(String name);
+   public abstract void setAge(int age);
+}
+Using any other modifier with the methods of an interface would lead to a compile time error.
+
+Q.3- What is the use of interface in Java?
+Ans- There are many reasons to use interfaces in java. They are as follows:
+a. An interface is used to achieve full abstraction.
+b. Using interfaces is the best way to expose our project’s API to some other project.
+c. Programmers use interfaces to customise features of software differently for different objects.
+d. By using interface, we can achieve the functionality of multiple inheritance.
+
+Q.4-  What is the difference between abstract class and interface in Java?
+Ans- Abstract class:
+a. Abstract class can have abstract and non-abstract methods.	
+b. Abstract class doesn't support multiple inheritance.	
+c. Abstract class can have final, non-final, static and non-static variables.	
+d. Abstract class can provide the implementation of interface.	
+e. The abstract keyword is used to declare abstract class.	
+f. An abstract class can extend another Java class and implement multiple Java interfaces.	
+
+Interface:
+a. Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+b. Interface supports multiple inheritance.
+c. Interface has only static and final variables.
+d. Interface can't provide the implementation of abstract class.
+e. The interface keyword is used to declare interface.
+f. An interface can extend another Java interface only.

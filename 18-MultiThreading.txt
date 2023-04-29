@@ -1,0 +1,89 @@
+                              Assignment-MultiThreading
+
+
+Q.1- What do you mean by MultiThreading? Why is it important?
+Ans- In Java, Multithreading refers to a process of executing two or more threads simultaneously for maximum utilization of the CPU. A thread in Java is a lightweight process requiring fewer resources to create and share the process resources.
+So multithreading leads to maximum utilization of the CPU by multitasking.
+
+
+Q.2- What are the benefits of using Multithreading?
+Ans- Benefits of Multithreading
+a.Improved throughput.
+b.Simultaneous and fully symmetric use of multiple processors for computation and I/O.
+c.Superior application responsiveness. 
+d.Improved server responsiveness.
+e.Minimized system resource usage.
+f.Program structure simplification.
+g.Better communication.
+
+Q.3- What is Thread in Java?
+Ans- A Thread is a very light-weighted process, or we can say the smallest part of the process.A thread is a thread of execution in a program. The Java Virtual Machine allows an application to have multiple threads of execution running concurrently. Every thread has a priority. Threads with higher priority are executed in preference to threads with lower priority.
+
+Q.4- What are the two ways of implementing thread in java?
+Ans- There are two ways to create a thread:
+a.By extending Thread class:
+ex-
+class Multi extends Thread{  
+public void run(){  
+    System.out.println("thread is running...");  
+}  
+public static void main(String args[]){  
+    Multi t1=new Multi();  
+    t1.start();  
+ }  
+} 
+ 
+b.By implementing Runnable interface:
+ex-
+class Multi3 implements Runnable{  
+public void run(){  
+System.out.println("thread is running...");  
+}  
+  
+public static void main(String args[]){  
+Multi3 m1=new Multi3();  
+Thread t1 =new Thread(m1);   // Using the constructor Thread(Runnable r)  
+t1.start();  
+ }  
+}  
+
+Q.5- What is the difference between thread and process?
+Ans- a.A process is an instance of a program that is being executed or processed.
+Thread is a segment of a process or a lightweight process that is managed by the scheduler independently.
+b.Processes are independent of each other and hence don't share a memory or other resources.
+Threads are interdependent and share memory.
+c.Each process is treated as a new process by the operating system.
+The operating system takes all the user-level threads as a single process.
+
+Q.6- How can we create daemon thread?
+Ans- Daemon thread in Java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e. when all the user threads dies, JVM terminates this thread automatically.
+There are many java daemon threads running automatically e.g. gc, finalizer etc.
+----
+public class TestDaemonThread extends Thread{  
+ public void run(){  
+  if(Thread.currentThread().isDaemon()){//checking for daemon thread  
+   System.out.println("daemon thread work");  
+  }  
+  else{  
+  System.out.println("user thread work");  
+ }  
+ }  
+ public static void main(String[] args){  
+  TestDaemonThread t1=new TestDaemonThread();//creating thread  
+  TestDaemonThread t2=new TestDaemonThread();  
+  TestDaemonThread t3=new TestDaemonThread();  
+  
+  t1.setDaemon(true);//now t1 is daemon thread  
+    
+  t1.start();//starting threads  
+  t2.start();  
+  t3.start();  
+ }  
+} 
+
+Q.7- What are the wait() and sleep() methods?
+Ans-Sleep():
+The Sleep () method is related to the Thread class that is used to stop the execution of the current Thread for few seconds. The Sleep () method takes the sleeping time in milliseconds. The monitor's ownership is not lost when we use the Sleep () method and start the execution again from where it stops. In simple words, the Sleep() method is responsible for sending the current Thread into the "Non Runnable" state.
+
+Wait():
+The Wait() method is related to the Object class. The Wait() method is responsible for sending the calling thread into the waiting state. The Thread remains in the waiting state until another thread doesn't invoke the notify() or notifyAll() method for that object. The Thread resumes the execution after obtaining the ownership of the monitor.

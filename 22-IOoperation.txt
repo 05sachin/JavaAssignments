@@ -1,0 +1,64 @@
+                            Assignment IO Operation
+
+Q.1- What is input and ouput stream in java?
+Ans- 
+OutputStream:
+Java application uses an output stream to write data to a destination; it may be a file, an array, peripheral device or socket.
+
+InputStream:
+Java application uses an input stream to read data from a source; it may be a file, an array, peripheral device or socket.
+
+Q.2- What are the methods of outputStream?
+Ans- Methods of OutputStream:
+The OutputStream class provides different methods that are implemented by its subclasses. Here are some of the methods:
+
+write() - writes the specified byte to the output stream
+write(byte[] array) - writes the bytes from the specified array to the output stream
+flush() - forces to write all data present in output stream to the destination
+close() - closes the output stream
+
+Q.3- What is serialization in java?
+Ans- Serialization is a mechanism of converting the state of an object into a byte stream.
+To serialize an object means to convert its state to a byte stream so that the byte stream can be reverted back into a copy of the object.
+
+Q.4- What is the serialization interface in java?
+Ans- Serializable interface: Serializable is a marker interface present in the java.io package. We can serialize objects using this interface i.e. save the object state into a file.Java provides the interface named ‘serializable’ using which we can implement serialization and deserialization in Java.
+
+Q.5- What is deserialization in java?
+Ans- Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
+
+Q.6- How is serialization achieved in java?
+Ans- For serializing the object, we call the writeObject() method of ObjectOutputStream class, and for deserialization we call the readObject() method of ObjectInputStream class. We must have to implement the Serializable interface for serializing the object.
+
+Q.7- How is deserialization achieved in java?
+Ans- The deserialization process involves converting a stream of bytes back into an object. Here are the steps involved in deserializing an object in Java:
+
+a.Create an ObjectInputStream object that will read the serialized data from an InputStream object (e.g. FileInputStream, ByteArrayInputStream).
+b.Call the readObject() method of the ObjectInputStream object to read the serialized object from the byte stream.
+c.Close the ObjectInputStream object.
+
+Q.8- How can you avoid certain member variables of class from getting serialized?
+Ans- If you don't want to serialize any data member of a class, you can mark it as transient.
+The Transient variable is a variable whose value is not serialized during the serialization process. We will get a default value for this variable when we deserialize it.
+
+Q.9- What classes are available in the java IO file classes API?
+Ans- 
+File
+RandomAccessFile
+FileInputStream
+FileReader
+FileMutputStream
+FileWriter
+
+Q.10- What is difference between Externalizable and serialization interface.
+Ans- serialization interface:
+a. A serializable interface is used to implement serialization. 
+b.Serializable is a marker interface i.e. it does not contain any method.	
+c. Serializable interface passes the responsibility of serialization to JVM and the programmer has no control over serialization, and it is a default algorithm.	
+d. Serialization using a serializable interface has bad performance.	
+
+Externalizable interface:
+a. An externalizable interface used to implement Externalization.
+b. The externalizable interface is not a marker interface and thus it defines two methods writeExternal() and readExternal().
+c. The externalizable interface provides all serialization responsibilities to a programmer and hence JVM has no control over serialization.
+d. Serialization using an externalizable interface has better performance.

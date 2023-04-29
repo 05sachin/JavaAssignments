@@ -1,0 +1,102 @@
+                              Assignment-Collection Framework
+
+
+Q.1- What is the Collection framework in Java?
+Ans- A collection is an object that represents a group of objects (such as the classic Vector class). A collections framework is a unified architecture for representing and manipulating collections, enabling collections to be manipulated independently of implementation details.
+
+Q.2- What is the difference between ArrayList and LinkedList?
+Ans- ArrayList:
+
+a.ArrayList internally uses a dynamic array to store the elements.	
+b. Manipulation with ArrayList is slow because it internally uses an array.If any element is removed from the array, all the other elements are shifted in memory.	
+c. An ArrayList class can act as a list only because it implements List only.	
+d. ArrayList is better for storing and accessing data.
+e. The memory location for the elements of an ArrayList is contiguous.
+	
+LinkedList:
+
+a. LinkedList internally uses a doubly linked list to store the elements.
+b. Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory.
+c. LinkedList class can act as a list and queue both because it implements List and Deque interfaces.
+d. LinkedList is better for manipulating data.
+e. The location for the elements of a linked list is not contagious.
+
+Q.3- What is the difference between Iterator and ListIterator?
+Ans- Iterator:
+
+a. Can traverse elements present in Collection only in the forward direction.	
+b. Helps to traverse Map, List and Set.	
+c. Indexes cannot be obtained by using Iterator.	
+d. Cannot modify or replace elements present in Collection.
+
+ListIterator:
+	
+a. Can traverse elements present in Collection both in forward and backward directions.
+b. Can only traverse List and not the other two.
+c. It has methods like nextIndex() and previousIndex() to obtain indexes of elements at any time while traversing List.
+d.We can modify or replace elements with the help of set(E e)
+
+Q.4- What is the difference between Iterator and Enumeration?
+Ans- Iterator:
+
+a. Iterator is a universal cursor as it is applicable for all the collection classes.	
+b. Iterator has the remove() method.	
+c. Iterator can do modifications (e.g using remove() method it removes the element from the Collection during traversal).	
+d. Iterator is not a legacy interface. Iterator can be used for the traversal of HashMap, LinkedList, ArrayList, HashSet, TreeMap, TreeSet .
+	
+Enumeration:
+
+a. Enumeration is not a universal cursor as it applies only to legacy classes.
+b. Enumeration does not have the remove() method.
+c. Enumeration interface acts as a read only interface, one can not do any modifications to Collection while traversing the elements of the Collection.
+d. Enumeration is a legacy interface which is used for traversing Vector, Hashtable.
+
+
+Q.5- What is the difference between List and Set?
+Ans- List:
+
+a. The list implementation allows us to add the same or duplicate elements.	
+b. The insertion order is maintained by the List.	
+c. List allows us to add any number of null values.	
+d. The List implementation classes are LinkedList and ArrayList.	
+e. We can get the element of a specified index from the list using the get() method.	
+
+Set:
+
+a. The set implementation doesn't allow us to add the same or duplicate elements.
+b. It doesn't maintain the insertion order of elements.
+c. Set allows us to add at least one null value in it.
+d. The Set implementation classes are TreeSet, HashSet and LinkedHashSet.
+e. We cannot find the element from the Set based on the index because it doesn't provide any get method().
+
+Q.6- What is the difference HashSet and TreeSet?
+Ans- HashSet:
+a. it does not provide a guarantee to sort the data.	
+b. In HashSet, only an element can be null.	
+c. It uses hashCode() or equals() method for comparison.	
+d. It is faster than TreeSet.	
+e. Internally it uses HashMap to store its elements.	
+
+TreeSet:
+
+a. It provides a guarantee to sort the data. The sorting depends on the supplied Comparator.
+b. It does not allow null elements.
+c. It uses compare() or compareTo() method for comparison.
+d. It is slower in comparison to HashSet.
+e. Internally it uses TreeMap to store its elements.
+
+Q.7- What is the difference between Array and ArrayList?
+Ans- Array:
+a. An array is a dynamically-created object. It serves as a container that holds the constant number of values of the same type. It has a contiguous memory location.	
+b. Array is static in size.	
+c. An array is a fixed-length data structure.	
+d. It is mandatory to provide the size of an array while initializing it directly or indirectly.	
+e. It performs fast in comparison to ArrayList because of fixed size.	
+
+ArrayList:
+
+a. The ArrayList is a class of Java Collections framework. It contains popular classes like Vector, HashTable, and HashMap.
+b. ArrayList is dynamic in size.
+c. ArrayList is a variable-length data structure. It can be resized itself when needed.
+d. We can create an instance of ArrayList without specifying its size. Java creates ArrayList of default size.
+e. ArrayList is internally backed by the array in Java. The resize operation in ArrayList slows down the performance.
